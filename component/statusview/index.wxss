@@ -1,0 +1,25 @@
+/* component/statusview/index.wxss */
+
+
+/* .status-view-class{
+  position: fixed;
+  height: 100%;
+  top: 120rpx;
+  left: 0rpx;
+  right: 0rpx;
+  text-align: center;
+} */
+.status {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 30%
+}
+.status-img {
+  width: 320rpx
+}
+.status-text {
+  font-size: 26rpx;
+  color: #BBB;
+  margin-top: 56rpx
+}

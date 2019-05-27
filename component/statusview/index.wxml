@@ -1,0 +1,8 @@
+<!--component/statusview/statusview.wxml-->
+
+<view class='status-view-class' hidden='{{!statusShow}}'>
+  <view class='status'>
+    <image class='status-img' src='{{statusImg}}' mode='widthFix' />
+    <text class='status-text'>{{statusText}}</text>
+  </view>
+</view>

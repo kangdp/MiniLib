@@ -1,0 +1,7 @@
+<!--component/imageloader/imageloader.wxml-->
+
+<view class='image-loader-class'>
+ <image class='image-loader-class' mode='{{mode}}' wx:if='{{loadStart}}' src='{{placeHolder}}'/>
+ <image class='image-loader-class' mode='{{mode}}' wx:if='{{loadError}}' src='{{errorLoad}}'/>
+ <image class='image-loader-class' mode='{{mode}}' hidden='{{!loadCompleted}}' src='{{loadUrl}}' binderror='bindload' bindload='bindload'/>
+</view>
