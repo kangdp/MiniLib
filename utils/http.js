@@ -12,7 +12,6 @@ const doRequest = (method) => {
     if (obj.data) {
       data = obj.data
     }
-
     wx.request({
       url: obj.url,
       method: method,

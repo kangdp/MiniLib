@@ -19,8 +19,8 @@ Component({
     
 
   },
-
-  externalClasses: ['status-view-class'],
+  
+  externalClasses: ['status-view-class','status-class','status-img-class','status-text-class'],
 
   /**
    * 组件的初始数据

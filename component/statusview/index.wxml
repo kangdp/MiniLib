@@ -1,8 +1,8 @@
 <!--component/statusview/statusview.wxml-->
 
 <view class='status-view-class' hidden='{{!statusShow}}'>
-  <view class='status'>
-    <image class='status-img' src='{{statusImg}}' mode='widthFix' />
-    <text class='status-text'>{{statusText}}</text>
+  <view class='status-class' style="display:flex;flex-direction:column;align-items:center;margin-top:30%;">
+    <image class='status-img-class' style="width:130rpx;" src='{{statusImg}}' mode='widthFix' />
+    <text class='status-text-class' style="font-size:26rpx;color:#BBB;margin-top:56rpx;width:443rpx;margin-left:auto;margin-right:auto;text-align:center;">{{statusText}}</text>
   </view>
 </view>
