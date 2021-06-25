@@ -1,0 +1,23 @@
+<!--component/state/state.wxml-->
+<!-- 页面状态管理 -->
+<view class="state-box state-box-class">
+    <!-- 
+    'loading' //加载中
+    'content' //显示内容
+    'error' //加载出错 
+    'empty' //空数据
+    -->
+   <view class="load-loading" wx:if="{{loadState == 'loading'}}">
+      <slot name='loading'></slot>
+   </view>
+   <view class="load-content" wx:if="{{loadState == 'content'}}">
+      <slot name='content'></slot>
+   </view>
+   <view class="load-error" wx:if="{{loadState == 'error'}}">
+      <slot name='error'></slot>
+   </view>
+   <view class="load-empty" wx:if="{{loadState == 'empty'}}">
+      <slot name='empty'></slot>
+   </view>
+
+</view>

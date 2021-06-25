@@ -1,0 +1,7 @@
+/* component/state/state.wxss */
+.state-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
