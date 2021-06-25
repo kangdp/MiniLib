@@ -4,17 +4,18 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    // 加载出错占位图
-    errorLoad: {
-      type: String,
-      value: ""
-    },
     //正在加载占位图
     placeHolder: {
       type: String,
       value: ""
     },
-    // 显示真正的图片
+    //加载出错占位图
+    errorLoad: {
+      type: String,
+      value: ""
+    },
+
+    //显示真正的图片
     loadUrl: {
       type: String,
       value: ""
@@ -24,7 +25,7 @@ Component({
       type: String,
       value: ""
     }
-   
+
   },
   externalClasses: ['image-loader-class'],
 
@@ -33,8 +34,7 @@ Component({
    */
   data: {
     loadStart: true,
-    loadCompleted: false,
-    loadError:false
+    loadCompleted: false
   },
 
   /**
@@ -42,22 +42,13 @@ Component({
    */
   methods: {
 
-    bindload: function(data){
-      let type = data.type
+    bindload: function (data) {
       this.setData({
         loadStart: false,
+        loadCompleted: true,
+        loadUrl: data.type == 'error' ? this.data.errorLoad : this.data.loadUrl 
       })
-      if(type == 'error'){//加载失败
-        this.setData({
-          loadError: true,
-          loadCompleted: false
-        })
-      }else if(type == 'load'){//加载成功
-        this.setData({
-          loadError: false,
-          loadCompleted: true
-        })
-      }
+
     },
   }
 })

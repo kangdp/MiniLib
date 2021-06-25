@@ -1,0 +1,29 @@
+
+//格式化日期：yyyy%mm%dd
+var formatDate = function(dateStr,format){
+  var date = getDate(dateStr)
+  var year = date.getFullYear()
+  var month = date.getMonth()+1
+  month = month < 10 ? "0" + month : month
+  var day = date.getDate()
+  day = day < 10 ? "0" + day : day
+  var hour = date.getHours()
+  hour = hour < 10 ? "0" + hour : hour
+  var minutes = date.getMinutes()
+  minutes = minutes < 10 ? "0" + minutes : minutes
+  var senond = date.getSeconds()
+  senond = senond < 10 ? "0" + senond : senond
+
+ return format.replace("yyyy",year)
+        .replace("MM",month)
+        .replace("dd",day)
+        .replace("hh",hour)
+        .replace("mm",minutes)
+        .replace("ss", senond)
+}
+
+
+
+module.exports = {
+  formatDate: formatDate
+}

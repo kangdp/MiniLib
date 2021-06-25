@@ -1,5 +1,5 @@
 <!--component/imageloader/imageloader.wxml-->
-
+  <!-- 占位图 -->
  <image class='image-loader-class' mode='{{mode}}' wx:if='{{loadStart}}' src='{{placeHolder}}'/>
- <image class='image-loader-class' mode='{{mode}}' wx:if='{{loadError}}' src='{{errorLoad}}'/>
+ <!-- 实际要加载的图 -->
  <image class='image-loader-class' mode='{{mode}}' hidden='{{!loadCompleted}}' src='{{loadUrl}}' binderror='bindload' bindload='bindload'/>
